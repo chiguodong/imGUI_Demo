@@ -1,4 +1,5 @@
 #include <GLFW/glfw3.h>
+#include "imgui.h"
 
 int main(void)
 {
@@ -12,7 +13,7 @@ int main(void)
 	window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
 	if (!window)
 	{
-		glfwTerminate();
+		glfwTerminate(); 
 		return -1;
 	}
 

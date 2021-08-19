@@ -18,5 +18,40 @@
     <ClCompile Include="src\main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="thirdLib\imgui\imgui.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdLib\imgui\imgui_demo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdLib\imgui\imgui_draw.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdLib\imgui\imgui_tables.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdLib\imgui\imgui_widgets.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="thirdLib\imgui\imconfig.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdLib\imgui\imgui.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdLib\imgui\imgui_internal.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdLib\imgui\imstb_rectpack.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdLib\imgui\imstb_textedit.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdLib\imgui\imstb_truetype.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
