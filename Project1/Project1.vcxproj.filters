@@ -13,45 +13,48 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\imgui">
+      <UniqueIdentifier>{80a7d694-29f7-4c8e-8a5a-5f308d39285d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\GL3w">
+      <UniqueIdentifier>{023d1e48-4b90-45c1-97fe-5a924be242b2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="thirdLib\imgui\imgui.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\imgui</Filter>
     </ClCompile>
     <ClCompile Include="thirdLib\imgui\imgui_demo.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\imgui</Filter>
     </ClCompile>
     <ClCompile Include="thirdLib\imgui\imgui_draw.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="thirdLib\imgui\imgui_tables.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\imgui</Filter>
     </ClCompile>
     <ClCompile Include="thirdLib\imgui\imgui_widgets.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdLib\imgui\imgui_tables.cpp">
+      <Filter>源文件\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdLib\imgui\imgui_impl_glfw.cpp">
+      <Filter>源文件\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdLib\imgui\imgui_impl_opengl3.cpp">
+      <Filter>源文件\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdLib\GL\gl3w.c">
+      <Filter>源文件\GL3w</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\openGLEnv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
     <ClInclude Include="thirdLib\imgui\imconfig.h">
-      <Filter>源文件</Filter>
-    </ClInclude>
-    <ClInclude Include="thirdLib\imgui\imgui.h">
-      <Filter>源文件</Filter>
-    </ClInclude>
-    <ClInclude Include="thirdLib\imgui\imgui_internal.h">
-      <Filter>源文件</Filter>
-    </ClInclude>
-    <ClInclude Include="thirdLib\imgui\imstb_rectpack.h">
-      <Filter>源文件</Filter>
-    </ClInclude>
-    <ClInclude Include="thirdLib\imgui\imstb_textedit.h">
-      <Filter>源文件</Filter>
-    </ClInclude>
-    <ClInclude Include="thirdLib\imgui\imstb_truetype.h">
-      <Filter>源文件</Filter>
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

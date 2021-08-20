@@ -72,9 +72,17 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -82,7 +90,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\zhangtianrui\source\repos\Project1\Project1\thirdLib\imgui;C:\Users\zhangtianrui\source\repos\Project1\Project1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\zhangtianrui\source\repos\Project1\Project1\thirdLib;C:\Users\zhangtianrui\source\repos\Project1\Project1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -96,7 +104,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\zhangtianrui\source\repos\Project1\Project1\thirdLib\imgui;C:\Users\zhangtianrui\source\repos\Project1\Project1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\zhangtianrui\source\repos\Project1\Project1\thirdLib;C:\Users\zhangtianrui\source\repos\Project1\Project1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -112,7 +120,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\zhangtianrui\source\repos\Project1\Project1\thirdLib\imgui;C:\Users\zhangtianrui\source\repos\Project1\Project1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\zhangtianrui\source\repos\Project1\Project1\thirdLib;C:\Users\zhangtianrui\source\repos\Project1\Project1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -130,7 +138,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\zhangtianrui\source\repos\Project1\Project1\thirdLib\imgui;C:\Users\zhangtianrui\source\repos\Project1\Project1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\zhangtianrui\source\repos\Project1\Project1\thirdLib;C:\Users\zhangtianrui\source\repos\Project1\Project1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -142,19 +150,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="thirdLib\GL\gl3w.c" />
     <ClCompile Include="thirdLib\imgui\imgui.cpp" />
     <ClCompile Include="thirdLib\imgui\imgui_demo.cpp" />
     <ClCompile Include="thirdLib\imgui\imgui_draw.cpp" />
+    <ClCompile Include="thirdLib\imgui\imgui_impl_glfw.cpp" />
+    <ClCompile Include="thirdLib\imgui\imgui_impl_opengl3.cpp" />
     <ClCompile Include="thirdLib\imgui\imgui_tables.cpp" />
     <ClCompile Include="thirdLib\imgui\imgui_widgets.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\openGLEnv.h" />
     <ClInclude Include="thirdLib\imgui\imconfig.h" />
-    <ClInclude Include="thirdLib\imgui\imgui.h" />
-    <ClInclude Include="thirdLib\imgui\imgui_internal.h" />
-    <ClInclude Include="thirdLib\imgui\imstb_rectpack.h" />
-    <ClInclude Include="thirdLib\imgui\imstb_textedit.h" />
-    <ClInclude Include="thirdLib\imgui\imstb_truetype.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
