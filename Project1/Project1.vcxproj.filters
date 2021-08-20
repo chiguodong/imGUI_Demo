@@ -19,6 +19,12 @@
     <Filter Include="源文件\GL3w">
       <UniqueIdentifier>{023d1e48-4b90-45c1-97fe-5a924be242b2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\console">
+      <UniqueIdentifier>{a6594441-39d5-487a-bd23-379f0aa93a88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\objects">
+      <UniqueIdentifier>{58968dec-8543-48a7-a564-bba6e055d372}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -48,12 +54,36 @@
     <ClCompile Include="thirdLib\GL\gl3w.c">
       <Filter>源文件\GL3w</Filter>
     </ClCompile>
+    <ClCompile Include="baseObject.cpp">
+      <Filter>源文件\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="nodesTreeViews.cpp">
+      <Filter>源文件\console</Filter>
+    </ClCompile>
+    <ClCompile Include="geometryObject.cpp">
+      <Filter>源文件\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="materialObject.cpp">
+      <Filter>源文件\objects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\openGLEnv.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="thirdLib\imgui\imconfig.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="baseObject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="nodesTreeViews.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="geometryObject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="materialObject.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

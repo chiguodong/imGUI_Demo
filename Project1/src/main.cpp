@@ -3,6 +3,8 @@
 #include "imgui/imgui.h"
 #include "imgui/imgui_impl_glfw.h"
 #include "imgui/imgui_impl_opengl3.h"
+#include "nodesTreeViews.h"
+#include "materialObject.h"
 
 int main(void)
 {
@@ -43,17 +45,24 @@ int main(void)
 	ImGui_ImplGlfw_InitForOpenGL(window, true);
 	ImGui_ImplOpenGL3_Init(glsl_version);
 
+	nodesTreeViews treeView;
+	materialObject::Ptr demoMaterialObject = std::make_shared<materialObject>();
+	demoMaterialObject->setName("head");
+	treeView.addObject(demoMaterialObject);
+
 	/* Loop until the user closes the window */
 	while (!glfwWindowShouldClose(window))
 	{
 		/* Poll for and process events */
 		glfwPollEvents();
-
-		//imgui
+		//imgui init
 		// Start the Dear ImGui frame
 		ImGui_ImplOpenGL3_NewFrame();
 		ImGui_ImplGlfw_NewFrame();
 		ImGui::NewFrame();
+
+		//imgui window
+		treeView.showTreeNodes();
 		ImGui::Begin("Hello, world!");                          // Create a window called "Hello, world!" and append into it.
 		ImGui::Text("This is some useful text.");               // Display some text (you can use a format strings too)
 		ImGui::End();
