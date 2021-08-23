@@ -16,9 +16,6 @@
     <Filter Include="源文件\imgui">
       <UniqueIdentifier>{80a7d694-29f7-4c8e-8a5a-5f308d39285d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="源文件\GL3w">
-      <UniqueIdentifier>{023d1e48-4b90-45c1-97fe-5a924be242b2}</UniqueIdentifier>
-    </Filter>
     <Filter Include="源文件\console">
       <UniqueIdentifier>{a6594441-39d5-487a-bd23-379f0aa93a88}</UniqueIdentifier>
     </Filter>
@@ -27,6 +24,36 @@
     </Filter>
     <Filter Include="源文件\interactor">
       <UniqueIdentifier>{d0d562a0-f5c7-4fe0-92eb-fa5e28154680}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\render3D">
+      <UniqueIdentifier>{85d2ce20-a601-407b-91e3-744fc0272511}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\render3D\Animation">
+      <UniqueIdentifier>{9d4a9acc-f670-4dc4-921c-f7ecd64d18e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\render3D\API">
+      <UniqueIdentifier>{b5909a7e-e4ca-42cf-b746-164692ab3653}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\render3D\Core">
+      <UniqueIdentifier>{79c99df4-8687-4265-9f68-1091250f520e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\render3D\Interaction">
+      <UniqueIdentifier>{e8bb6bd9-04aa-4d55-8ef0-e944a259db95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\render3D\Materials">
+      <UniqueIdentifier>{4abab40c-186d-4713-a0a8-40c5eca4698c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\render3D\Plugins">
+      <UniqueIdentifier>{332ae2e8-9030-4171-9411-992cf0a5dac2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\render3D\Wrapper">
+      <UniqueIdentifier>{134b20c3-770d-4912-87b9-0c28d29d1ce5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\render3D\Light">
+      <UniqueIdentifier>{2365d2cf-6a68-4149-bac3-1e64540ed94b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\glad">
+      <UniqueIdentifier>{202e2eb8-9cdd-433e-b993-172e1ec493e5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -54,9 +81,6 @@
     <ClCompile Include="thirdLib\imgui\imgui_impl_opengl3.cpp">
       <Filter>源文件\imgui</Filter>
     </ClCompile>
-    <ClCompile Include="thirdLib\GL\gl3w.c">
-      <Filter>源文件\GL3w</Filter>
-    </ClCompile>
     <ClCompile Include="baseObject.cpp">
       <Filter>源文件\objects</Filter>
     </ClCompile>
@@ -71,6 +95,222 @@
     </ClCompile>
     <ClCompile Include="fbxReader.cpp">
       <Filter>源文件\interactor</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Animation\SoulBone.cpp">
+      <Filter>源文件\render3D\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Animation\SoulBoneUpdateCallback.cpp">
+      <Filter>源文件\render3D\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Animation\SoulInterpolator.cpp">
+      <Filter>源文件\render3D\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Animation\SoulKeyframe.cpp">
+      <Filter>源文件\render3D\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Animation\SoulSampler.cpp">
+      <Filter>源文件\render3D\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Animation\SoulSkeleton.cpp">
+      <Filter>源文件\render3D\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Animation\SoulSkeletonUpdateCallback.cpp">
+      <Filter>源文件\render3D\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Animation\SoulSkin.cpp">
+      <Filter>源文件\render3D\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="render\API\SoulRenderAPI.cpp">
+      <Filter>源文件\render3D\API</Filter>
+    </ClCompile>
+    <ClCompile Include="render\API\sticker3D\SoulSticker3DCallback.cpp">
+      <Filter>源文件\render3D\API</Filter>
+    </ClCompile>
+    <ClCompile Include="render\API\sticker3D\SoulSticker3DLight.cpp">
+      <Filter>源文件\render3D\API</Filter>
+    </ClCompile>
+    <ClCompile Include="render\API\sticker3D\SoulSticker3DRender.cpp">
+      <Filter>源文件\render3D\API</Filter>
+    </ClCompile>
+    <ClCompile Include="render\API\avatar\SoulAvatarRender.cpp">
+      <Filter>源文件\render3D\API</Filter>
+    </ClCompile>
+    <ClCompile Include="render\API\avatar\SoulDemoApi.cpp">
+      <Filter>源文件\render3D\API</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Core\SoulBasePass.cpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Core\SoulBlendGeometry.cpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Core\SoulBlinnPhongMaterial.cpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Core\SoulCallback.cpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Core\SoulCamera.cpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Core\SoulCameraController.cpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Core\SoulEvent.cpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Core\SoulEventVisitor.cpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Core\SoulGeneralGeometry.cpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Core\SoulGeode.cpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Core\SoulGeometry.cpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Core\SoulGraphicsState.cpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Core\SoulGroup.cpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Core\SoulIPass.cpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Core\SoulIRenderer.cpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Core\SoulLight.cpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Core\SoulMaterial.cpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Core\SoulNode.cpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Core\SoulNodeVisitor.cpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Core\SoulPostProcessPass.cpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Core\SoulRasterScenePass.cpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Core\SoulRectangleGeometry.cpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Core\SoulRenderer.cpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Core\SoulResourceManager.cpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Core\SoulScene.cpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Core\SoulSceneRenderer.cpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Core\SoulTime.cpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Core\SoulTransform.cpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Core\SoulUpdateVisitor.cpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Core\SoulUserData.cpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Core\SoulZPass.cpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Interaction\Event\SoulRotateCameraEvent.cpp">
+      <Filter>源文件\render3D\Interaction</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Interaction\Event\SoulSetModelYawEvent.cpp">
+      <Filter>源文件\render3D\Interaction</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Interaction\Event\SoulTranslateModelEvent.cpp">
+      <Filter>源文件\render3D\Interaction</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Interaction\Event\SoulUpdateUniformEvent.cpp">
+      <Filter>源文件\render3D\Interaction</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Interaction\Callback\SoulNodeOperationCallback.cpp">
+      <Filter>源文件\render3D\Interaction</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Interaction\Callback\SoulNodeParamChangeCallback.cpp">
+      <Filter>源文件\render3D\Interaction</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Interaction\Callback\SoulTransformCallback.cpp">
+      <Filter>源文件\render3D\Interaction</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Materials\SoulPhysicalMaterial.cpp">
+      <Filter>源文件\render3D\Materials</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Plugins\SoulFilePath.cpp">
+      <Filter>源文件\render3D\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Plugins\SoulBundleReader.cpp">
+      <Filter>源文件\render3D\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Plugins\SoulBundleReader_new.cpp">
+      <Filter>源文件\render3D\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Wrapper\SoulElementBufferObject.cpp">
+      <Filter>源文件\render3D\Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Wrapper\SoulFrameBuffer.cpp">
+      <Filter>源文件\render3D\Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Wrapper\SoulGlslProcessor.cpp">
+      <Filter>源文件\render3D\Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Wrapper\SoulImage.cpp">
+      <Filter>源文件\render3D\Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Wrapper\SoulProgram.cpp">
+      <Filter>源文件\render3D\Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Wrapper\SoulShader.cpp">
+      <Filter>源文件\render3D\Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Wrapper\SoulTexture2D.cpp">
+      <Filter>源文件\render3D\Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Wrapper\SoulTextureCube.cpp">
+      <Filter>源文件\render3D\Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Wrapper\SoulUniform.cpp">
+      <Filter>源文件\render3D\Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Wrapper\SoulUtils.cpp">
+      <Filter>源文件\render3D\Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Wrapper\SoulVertexArrayObject.cpp">
+      <Filter>源文件\render3D\Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Wrapper\SoulVertexBufferObject.cpp">
+      <Filter>源文件\render3D\Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Lights\SoulPointLight.cpp">
+      <Filter>源文件\render3D\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Lights\SoulSpotLight.cpp">
+      <Filter>源文件\render3D\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Lights\SoulDirectionalLight.cpp">
+      <Filter>源文件\render3D\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdLib\glad\src\glad.c">
+      <Filter>源文件\glad</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -97,6 +337,246 @@
     </ClInclude>
     <ClInclude Include="fbxGeometryInfo.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Animation\SoulBone.hpp">
+      <Filter>源文件\render3D\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Animation\SoulBoneUpdateCallback.hpp">
+      <Filter>源文件\render3D\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Animation\SoulInterpolator.hpp">
+      <Filter>源文件\render3D\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Animation\SoulKeyframe.hpp">
+      <Filter>源文件\render3D\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Animation\SoulSampler.hpp">
+      <Filter>源文件\render3D\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Animation\SoulSkeleton.hpp">
+      <Filter>源文件\render3D\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Animation\SoulSkeletonUpdateCallback.hpp">
+      <Filter>源文件\render3D\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Animation\SoulSkin.hpp">
+      <Filter>源文件\render3D\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="render\API\SoulRenderAPI.hpp">
+      <Filter>源文件\render3D\API</Filter>
+    </ClInclude>
+    <ClInclude Include="render\API\sticker3D\SoulSticker3DCallback.hpp">
+      <Filter>源文件\render3D\API</Filter>
+    </ClInclude>
+    <ClInclude Include="render\API\sticker3D\SoulSticker3DLight.hpp">
+      <Filter>源文件\render3D\API</Filter>
+    </ClInclude>
+    <ClInclude Include="render\API\sticker3D\SoulSticker3DRender.hpp">
+      <Filter>源文件\render3D\API</Filter>
+    </ClInclude>
+    <ClInclude Include="render\API\avatar\SoulAvatarRender.hpp">
+      <Filter>源文件\render3D\API</Filter>
+    </ClInclude>
+    <ClInclude Include="render\API\avatar\SoulDemoApi.hpp">
+      <Filter>源文件\render3D\API</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulBasePass.hpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulBlendGeometry.hpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulBlendShape.hpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulBlinnPhongMaterial.hpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulCallback.hpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulCamera.hpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulCameraController.h">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulEvent.hpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulEventVisitor.hpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulGeneralGeometry.hpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulGeode.hpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulGeometry.hpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulGraphicsState.hpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulGroup.hpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulIPass.hpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulIRenderer.hpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulLight.hpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulMaterial.hpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulNode.hpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulNodeVisitor.hpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulPostProcessPass.hpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulPrefix.h">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulRasterScenePass.hpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulRectangleGeometry.hpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulRenderer.hpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulResourceManager.hpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulScene.hpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulSceneRenderer.hpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulTime.hpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulTransform.hpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulUpdateVisitor.hpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulUserData.hpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Core\SoulZPass.hpp">
+      <Filter>源文件\render3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Interaction\Event\SoulAddNodesEvent.hpp">
+      <Filter>源文件\render3D\Interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Interaction\Event\SoulClearNodesEvent.hpp">
+      <Filter>源文件\render3D\Interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Interaction\Event\SoulDeleteNodeEvent.hpp">
+      <Filter>源文件\render3D\Interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Interaction\Event\SoulFlipTransformEvent.hpp">
+      <Filter>源文件\render3D\Interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Interaction\Event\SoulNodeParamChangeEvent.hpp">
+      <Filter>源文件\render3D\Interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Interaction\Event\SoulReplaceNodesEvent.hpp">
+      <Filter>源文件\render3D\Interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Interaction\Event\SoulRotateCameraEvent.hpp">
+      <Filter>源文件\render3D\Interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Interaction\Event\SoulSetModelYawEvent.hpp">
+      <Filter>源文件\render3D\Interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Interaction\Event\SoulTranslateModelEvent.hpp">
+      <Filter>源文件\render3D\Interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Interaction\Event\SoulUpdateUniformEvent.hpp">
+      <Filter>源文件\render3D\Interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Interaction\Callback\SoulNodeOperationCallback.hpp">
+      <Filter>源文件\render3D\Interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Interaction\Callback\SoulNodeParamChangeCallback.hpp">
+      <Filter>源文件\render3D\Interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Interaction\Callback\SoulTransformCallback.hpp">
+      <Filter>源文件\render3D\Interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Materials\SoulPhysicalMaterial.hpp">
+      <Filter>源文件\render3D\Materials</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Plugins\SoulBundleReader_new.h">
+      <Filter>源文件\render3D\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Plugins\SoulFilePath.hpp">
+      <Filter>源文件\render3D\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Plugins\SoulGeometryInfo.h">
+      <Filter>源文件\render3D\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Plugins\SoulBundleReader.hpp">
+      <Filter>源文件\render3D\Plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Wrapper\SoulElementBufferObject.hpp">
+      <Filter>源文件\render3D\Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Wrapper\SoulFrameBuffer.hpp">
+      <Filter>源文件\render3D\Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Wrapper\SoulGlslProcessor.hpp">
+      <Filter>源文件\render3D\Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Wrapper\SoulImage.hpp">
+      <Filter>源文件\render3D\Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Wrapper\SoulProgram.hpp">
+      <Filter>源文件\render3D\Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Wrapper\SoulShader.hpp">
+      <Filter>源文件\render3D\Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Wrapper\SoulTexture2D.hpp">
+      <Filter>源文件\render3D\Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Wrapper\SoulTextureCube.hpp">
+      <Filter>源文件\render3D\Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Wrapper\SoulUniform.hpp">
+      <Filter>源文件\render3D\Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Wrapper\SoulUtils.hpp">
+      <Filter>源文件\render3D\Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Wrapper\SoulVertexArrayObject.h">
+      <Filter>源文件\render3D\Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Wrapper\SoulVertexBufferObject.hpp">
+      <Filter>源文件\render3D\Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Lights\SoulPointLight.hpp">
+      <Filter>源文件\render3D\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Lights\SoulSpotLight.hpp">
+      <Filter>源文件\render3D\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Lights\SoulDirectionalLight.hpp">
+      <Filter>源文件\render3D\Light</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

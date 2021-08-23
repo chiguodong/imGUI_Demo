@@ -86,11 +86,13 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\zhangtianrui\source\repos\Project1\Project1;C:\Users\zhangtianrui\source\repos\Project1\Project1\thirdLib;C:\Users\zhangtianrui\source\repos\Project1\Project1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\zhangtianrui\source\repos\Project1\Project1\render\include;C:\Users\zhangtianrui\source\repos\Project1\Project1\render\thirdParty;C:\Users\zhangtianrui\source\repos\Project1\Project1;C:\Users\zhangtianrui\source\repos\Project1\Project1\thirdLib;C:\Users\zhangtianrui\source\repos\Project1\Project1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -100,11 +102,13 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\zhangtianrui\source\repos\Project1\Project1;C:\Users\zhangtianrui\source\repos\Project1\Project1\thirdLib;C:\Users\zhangtianrui\source\repos\Project1\Project1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\zhangtianrui\source\repos\Project1\Project1\render\include;C:\Users\zhangtianrui\source\repos\Project1\Project1\render\thirdParty;C:\Users\zhangtianrui\source\repos\Project1\Project1;C:\Users\zhangtianrui\source\repos\Project1\Project1\thirdLib;C:\Users\zhangtianrui\source\repos\Project1\Project1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -114,13 +118,15 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\zhangtianrui\source\repos\Project1\Project1;C:\Users\zhangtianrui\source\repos\Project1\Project1\thirdLib;C:\Users\zhangtianrui\source\repos\Project1\Project1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\zhangtianrui\source\repos\Project1\Project1\render\include;C:\Users\zhangtianrui\source\repos\Project1\Project1\render\thirdParty;C:\Users\zhangtianrui\source\repos\Project1\Project1;C:\Users\zhangtianrui\source\repos\Project1\Project1\thirdLib;C:\Users\zhangtianrui\source\repos\Project1\Project1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -132,13 +138,15 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\zhangtianrui\source\repos\Project1\Project1;C:\Users\zhangtianrui\source\repos\Project1\Project1\thirdLib;C:\Users\zhangtianrui\source\repos\Project1\Project1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\zhangtianrui\source\repos\Project1\Project1\render\include;C:\Users\zhangtianrui\source\repos\Project1\Project1\render\thirdParty;C:\Users\zhangtianrui\source\repos\Project1\Project1;C:\Users\zhangtianrui\source\repos\Project1\Project1\thirdLib;C:\Users\zhangtianrui\source\repos\Project1\Project1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -153,8 +161,79 @@
     <ClCompile Include="fbxReader.cpp" />
     <ClCompile Include="geometryObject.cpp" />
     <ClCompile Include="materialObject.cpp" />
+    <ClCompile Include="render\Animation\SoulBone.cpp" />
+    <ClCompile Include="render\Animation\SoulBoneUpdateCallback.cpp" />
+    <ClCompile Include="render\Animation\SoulInterpolator.cpp" />
+    <ClCompile Include="render\Animation\SoulKeyframe.cpp" />
+    <ClCompile Include="render\Animation\SoulSampler.cpp" />
+    <ClCompile Include="render\Animation\SoulSkeleton.cpp" />
+    <ClCompile Include="render\Animation\SoulSkeletonUpdateCallback.cpp" />
+    <ClCompile Include="render\Animation\SoulSkin.cpp" />
+    <ClCompile Include="render\API\avatar\SoulAvatarRender.cpp" />
+    <ClCompile Include="render\API\avatar\SoulDemoApi.cpp" />
+    <ClCompile Include="render\API\SoulRenderAPI.cpp" />
+    <ClCompile Include="render\API\sticker3D\SoulSticker3DCallback.cpp" />
+    <ClCompile Include="render\API\sticker3D\SoulSticker3DLight.cpp" />
+    <ClCompile Include="render\API\sticker3D\SoulSticker3DRender.cpp" />
+    <ClCompile Include="render\Core\SoulBasePass.cpp" />
+    <ClCompile Include="render\Core\SoulBlendGeometry.cpp" />
+    <ClCompile Include="render\Core\SoulBlinnPhongMaterial.cpp" />
+    <ClCompile Include="render\Core\SoulCallback.cpp" />
+    <ClCompile Include="render\Core\SoulCamera.cpp" />
+    <ClCompile Include="render\Core\SoulCameraController.cpp" />
+    <ClCompile Include="render\Core\SoulEvent.cpp" />
+    <ClCompile Include="render\Core\SoulEventVisitor.cpp" />
+    <ClCompile Include="render\Core\SoulGeneralGeometry.cpp" />
+    <ClCompile Include="render\Core\SoulGeode.cpp" />
+    <ClCompile Include="render\Core\SoulGeometry.cpp" />
+    <ClCompile Include="render\Core\SoulGraphicsState.cpp" />
+    <ClCompile Include="render\Core\SoulGroup.cpp" />
+    <ClCompile Include="render\Core\SoulIPass.cpp" />
+    <ClCompile Include="render\Core\SoulIRenderer.cpp" />
+    <ClCompile Include="render\Core\SoulLight.cpp" />
+    <ClCompile Include="render\Core\SoulMaterial.cpp" />
+    <ClCompile Include="render\Core\SoulNode.cpp" />
+    <ClCompile Include="render\Core\SoulNodeVisitor.cpp" />
+    <ClCompile Include="render\Core\SoulPostProcessPass.cpp" />
+    <ClCompile Include="render\Core\SoulRasterScenePass.cpp" />
+    <ClCompile Include="render\Core\SoulRectangleGeometry.cpp" />
+    <ClCompile Include="render\Core\SoulRenderer.cpp" />
+    <ClCompile Include="render\Core\SoulResourceManager.cpp" />
+    <ClCompile Include="render\Core\SoulScene.cpp" />
+    <ClCompile Include="render\Core\SoulSceneRenderer.cpp" />
+    <ClCompile Include="render\Core\SoulTime.cpp" />
+    <ClCompile Include="render\Core\SoulTransform.cpp" />
+    <ClCompile Include="render\Core\SoulUpdateVisitor.cpp" />
+    <ClCompile Include="render\Core\SoulUserData.cpp" />
+    <ClCompile Include="render\Core\SoulZPass.cpp" />
+    <ClCompile Include="render\Interaction\Callback\SoulNodeOperationCallback.cpp" />
+    <ClCompile Include="render\Interaction\Callback\SoulNodeParamChangeCallback.cpp" />
+    <ClCompile Include="render\Interaction\Callback\SoulTransformCallback.cpp" />
+    <ClCompile Include="render\Interaction\Event\SoulRotateCameraEvent.cpp" />
+    <ClCompile Include="render\Interaction\Event\SoulSetModelYawEvent.cpp" />
+    <ClCompile Include="render\Interaction\Event\SoulTranslateModelEvent.cpp" />
+    <ClCompile Include="render\Interaction\Event\SoulUpdateUniformEvent.cpp" />
+    <ClCompile Include="render\Lights\SoulDirectionalLight.cpp" />
+    <ClCompile Include="render\Lights\SoulPointLight.cpp" />
+    <ClCompile Include="render\Lights\SoulSpotLight.cpp" />
+    <ClCompile Include="render\Materials\SoulPhysicalMaterial.cpp" />
+    <ClCompile Include="render\Plugins\SoulBundleReader.cpp" />
+    <ClCompile Include="render\Plugins\SoulBundleReader_new.cpp" />
+    <ClCompile Include="render\Plugins\SoulFilePath.cpp" />
+    <ClCompile Include="render\Wrapper\SoulElementBufferObject.cpp" />
+    <ClCompile Include="render\Wrapper\SoulFrameBuffer.cpp" />
+    <ClCompile Include="render\Wrapper\SoulGlslProcessor.cpp" />
+    <ClCompile Include="render\Wrapper\SoulImage.cpp" />
+    <ClCompile Include="render\Wrapper\SoulProgram.cpp" />
+    <ClCompile Include="render\Wrapper\SoulShader.cpp" />
+    <ClCompile Include="render\Wrapper\SoulTexture2D.cpp" />
+    <ClCompile Include="render\Wrapper\SoulTextureCube.cpp" />
+    <ClCompile Include="render\Wrapper\SoulUniform.cpp" />
+    <ClCompile Include="render\Wrapper\SoulUtils.cpp" />
+    <ClCompile Include="render\Wrapper\SoulVertexArrayObject.cpp" />
+    <ClCompile Include="render\Wrapper\SoulVertexBufferObject.cpp" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="thirdLib\GL\gl3w.c" />
+    <ClCompile Include="thirdLib\glad\src\glad.c" />
     <ClCompile Include="thirdLib\imgui\imgui.cpp" />
     <ClCompile Include="thirdLib\imgui\imgui_demo.cpp" />
     <ClCompile Include="thirdLib\imgui\imgui_draw.cpp" />
@@ -170,6 +249,86 @@
     <ClInclude Include="geometryObject.h" />
     <ClInclude Include="include\openGLEnv.h" />
     <ClInclude Include="materialObject.h" />
+    <ClInclude Include="render\Animation\SoulBone.hpp" />
+    <ClInclude Include="render\Animation\SoulBoneUpdateCallback.hpp" />
+    <ClInclude Include="render\Animation\SoulInterpolator.hpp" />
+    <ClInclude Include="render\Animation\SoulKeyframe.hpp" />
+    <ClInclude Include="render\Animation\SoulSampler.hpp" />
+    <ClInclude Include="render\Animation\SoulSkeleton.hpp" />
+    <ClInclude Include="render\Animation\SoulSkeletonUpdateCallback.hpp" />
+    <ClInclude Include="render\Animation\SoulSkin.hpp" />
+    <ClInclude Include="render\API\avatar\SoulAvatarRender.hpp" />
+    <ClInclude Include="render\API\avatar\SoulDemoApi.hpp" />
+    <ClInclude Include="render\API\SoulRenderAPI.hpp" />
+    <ClInclude Include="render\API\sticker3D\SoulSticker3DCallback.hpp" />
+    <ClInclude Include="render\API\sticker3D\SoulSticker3DLight.hpp" />
+    <ClInclude Include="render\API\sticker3D\SoulSticker3DRender.hpp" />
+    <ClInclude Include="render\Core\SoulBasePass.hpp" />
+    <ClInclude Include="render\Core\SoulBlendGeometry.hpp" />
+    <ClInclude Include="render\Core\SoulBlendShape.hpp" />
+    <ClInclude Include="render\Core\SoulBlinnPhongMaterial.hpp" />
+    <ClInclude Include="render\Core\SoulCallback.hpp" />
+    <ClInclude Include="render\Core\SoulCamera.hpp" />
+    <ClInclude Include="render\Core\SoulCameraController.h" />
+    <ClInclude Include="render\Core\SoulEvent.hpp" />
+    <ClInclude Include="render\Core\SoulEventVisitor.hpp" />
+    <ClInclude Include="render\Core\SoulGeneralGeometry.hpp" />
+    <ClInclude Include="render\Core\SoulGeode.hpp" />
+    <ClInclude Include="render\Core\SoulGeometry.hpp" />
+    <ClInclude Include="render\Core\SoulGraphicsState.hpp" />
+    <ClInclude Include="render\Core\SoulGroup.hpp" />
+    <ClInclude Include="render\Core\SoulIPass.hpp" />
+    <ClInclude Include="render\Core\SoulIRenderer.hpp" />
+    <ClInclude Include="render\Core\SoulLight.hpp" />
+    <ClInclude Include="render\Core\SoulMaterial.hpp" />
+    <ClInclude Include="render\Core\SoulNode.hpp" />
+    <ClInclude Include="render\Core\SoulNodeVisitor.hpp" />
+    <ClInclude Include="render\Core\SoulPostProcessPass.hpp" />
+    <ClInclude Include="render\Core\SoulPrefix.h" />
+    <ClInclude Include="render\Core\SoulRasterScenePass.hpp" />
+    <ClInclude Include="render\Core\SoulRectangleGeometry.hpp" />
+    <ClInclude Include="render\Core\SoulRenderer.hpp" />
+    <ClInclude Include="render\Core\SoulResourceManager.hpp" />
+    <ClInclude Include="render\Core\SoulScene.hpp" />
+    <ClInclude Include="render\Core\SoulSceneRenderer.hpp" />
+    <ClInclude Include="render\Core\SoulTime.hpp" />
+    <ClInclude Include="render\Core\SoulTransform.hpp" />
+    <ClInclude Include="render\Core\SoulUpdateVisitor.hpp" />
+    <ClInclude Include="render\Core\SoulUserData.hpp" />
+    <ClInclude Include="render\Core\SoulZPass.hpp" />
+    <ClInclude Include="render\Interaction\Callback\SoulNodeOperationCallback.hpp" />
+    <ClInclude Include="render\Interaction\Callback\SoulNodeParamChangeCallback.hpp" />
+    <ClInclude Include="render\Interaction\Callback\SoulTransformCallback.hpp" />
+    <ClInclude Include="render\Interaction\Event\SoulAddNodesEvent.hpp" />
+    <ClInclude Include="render\Interaction\Event\SoulClearNodesEvent.hpp" />
+    <ClInclude Include="render\Interaction\Event\SoulDeleteNodeEvent.hpp" />
+    <ClInclude Include="render\Interaction\Event\SoulFlipTransformEvent.hpp" />
+    <ClInclude Include="render\Interaction\Event\SoulNodeParamChangeEvent.hpp" />
+    <ClInclude Include="render\Interaction\Event\SoulReplaceNodesEvent.hpp" />
+    <ClInclude Include="render\Interaction\Event\SoulRotateCameraEvent.hpp" />
+    <ClInclude Include="render\Interaction\Event\SoulSetModelYawEvent.hpp" />
+    <ClInclude Include="render\Interaction\Event\SoulTranslateModelEvent.hpp" />
+    <ClInclude Include="render\Interaction\Event\SoulUpdateUniformEvent.hpp" />
+    <ClInclude Include="render\Lights\SoulDirectionalLight.hpp" />
+    <ClInclude Include="render\Lights\SoulPointLight.hpp" />
+    <ClInclude Include="render\Lights\SoulSpotLight.hpp" />
+    <ClInclude Include="render\Materials\SoulPhysicalMaterial.hpp" />
+    <ClInclude Include="render\Plugins\SoulBundleReader.hpp" />
+    <ClInclude Include="render\Plugins\SoulBundleReader_new.h" />
+    <ClInclude Include="render\Plugins\SoulFilePath.hpp" />
+    <ClInclude Include="render\Plugins\SoulGeometryInfo.h" />
+    <ClInclude Include="render\Wrapper\SoulElementBufferObject.hpp" />
+    <ClInclude Include="render\Wrapper\SoulFrameBuffer.hpp" />
+    <ClInclude Include="render\Wrapper\SoulGlslProcessor.hpp" />
+    <ClInclude Include="render\Wrapper\SoulImage.hpp" />
+    <ClInclude Include="render\Wrapper\SoulProgram.hpp" />
+    <ClInclude Include="render\Wrapper\SoulShader.hpp" />
+    <ClInclude Include="render\Wrapper\SoulTexture2D.hpp" />
+    <ClInclude Include="render\Wrapper\SoulTextureCube.hpp" />
+    <ClInclude Include="render\Wrapper\SoulUniform.hpp" />
+    <ClInclude Include="render\Wrapper\SoulUtils.hpp" />
+    <ClInclude Include="render\Wrapper\SoulVertexArrayObject.h" />
+    <ClInclude Include="render\Wrapper\SoulVertexBufferObject.hpp" />
     <ClInclude Include="thirdLib\imgui\imconfig.h" />
     <ClInclude Include="nodesTreeViews.h" />
     <ClInclude Include="fbxGeometryInfo.h" />

@@ -1,6 +1,4 @@
-#define NOMINMAX
-
-#include <GL/gl3w.h>
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include "imgui/imgui.h"
 #include "imgui/imgui_impl_glfw.h"
@@ -31,7 +29,7 @@ int main(void)
 	/* Make the window's context current */
 	glfwMakeContextCurrent(window);
 
-	bool err = gl3wInit() != 0;
+	bool err = gladLoadGL() != 0;
 	// Imgui context
 	// Setup Dear ImGui context
 	IMGUI_CHECKVERSION();
