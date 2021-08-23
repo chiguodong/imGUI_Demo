@@ -25,6 +25,9 @@
     <Filter Include="源文件\objects">
       <UniqueIdentifier>{58968dec-8543-48a7-a564-bba6e055d372}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\interactor">
+      <UniqueIdentifier>{d0d562a0-f5c7-4fe0-92eb-fa5e28154680}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -66,6 +69,9 @@
     <ClCompile Include="materialObject.cpp">
       <Filter>源文件\objects</Filter>
     </ClCompile>
+    <ClCompile Include="fbxReader.cpp">
+      <Filter>源文件\interactor</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\openGLEnv.h">
@@ -84,6 +90,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="materialObject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fbxReader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fbxGeometryInfo.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

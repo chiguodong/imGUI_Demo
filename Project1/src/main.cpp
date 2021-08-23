@@ -1,3 +1,5 @@
+#define NOMINMAX
+
 #include <GL/gl3w.h>
 #include <GLFW/glfw3.h>
 #include "imgui/imgui.h"
@@ -5,6 +7,7 @@
 #include "imgui/imgui_impl_opengl3.h"
 #include "nodesTreeViews.h"
 #include "materialObject.h"
+#include "fbxReader.h"
 
 int main(void)
 {
@@ -45,11 +48,15 @@ int main(void)
 	ImGui_ImplGlfw_InitForOpenGL(window, true);
 	ImGui_ImplOpenGL3_Init(glsl_version);
 
+	//treeView
 	nodesTreeViews treeView;
 	materialObject::Ptr demoMaterialObject = std::make_shared<materialObject>();
 	demoMaterialObject->setName("head");
 	treeView.addObject(demoMaterialObject);
 
+	//fbx reader
+	fbxReader reader("D:/resource/expression.fbx");
+	reader.read();
 	/* Loop until the user closes the window */
 	while (!glfwWindowShouldClose(window))
 	{
@@ -61,8 +68,9 @@ int main(void)
 		ImGui_ImplGlfw_NewFrame();
 		ImGui::NewFrame();
 
-		//imgui window
+		//tree window
 		treeView.showTreeNodes();
+		//main window
 		ImGui::Begin("Hello, world!");                          // Create a window called "Hello, world!" and append into it.
 		ImGui::Text("This is some useful text.");               // Display some text (you can use a format strings too)
 		ImGui::End();
