@@ -53,8 +53,10 @@ int main(void)
 	treeView.addObject(demoMaterialObject);
 
 	//fbx reader
-	fbxReader reader("D:/resource/expression.fbx");
-	reader.read();
+
+//	fbxReader reader("D:/resource/expression.fbx");
+//	reader.read();
+
 	/* Loop until the user closes the window */
 	while (!glfwWindowShouldClose(window))
 	{

@@ -22,6 +22,7 @@ public:
 	inline void setPath(const std::string& path) { m_path = path; }
 	inline bool isRead() { return m_isRead; }
 	void        read();
+	inline void setFileName(const std::string& name) { m_fileName = name; }
 
 	std::vector<FbxMesh>&       getMeshes() { return m_meshes; }
 
@@ -32,6 +33,7 @@ protected:
 protected:
 	bool                        m_isRead{ false };
 	std::string                 m_path;
+	std::string                 m_fileName{""};
 	std::vector<FbxMesh>		m_meshes;
 
 };
