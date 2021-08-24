@@ -48,9 +48,9 @@ int main(void)
 
 	//treeView
 	nodesTreeViews treeView;
-	materialObject::Ptr demoMaterialObject = std::make_shared<materialObject>();
-	demoMaterialObject->setName("head");
-	treeView.addObject(demoMaterialObject);
+	//materialObject::Ptr demoMaterialObject = std::make_shared<materialObject>();
+	//demoMaterialObject->setName("head");
+	//treeView.addObject(demoMaterialObject);
 
 	//fbx reader
 
@@ -70,10 +70,6 @@ int main(void)
 
 		//tree window
 		treeView.showTreeNodes();
-		//main window
-		ImGui::Begin("Hello, world!");                          // Create a window called "Hello, world!" and append into it.
-		ImGui::Text("This is some useful text.");               // Display some text (you can use a format strings too)
-		ImGui::End();
 		ImGui::Render();
 		int display_w, display_h;
 		glfwGetFramebufferSize(window, &display_w, &display_h);

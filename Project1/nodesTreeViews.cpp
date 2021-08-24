@@ -1,5 +1,5 @@
 #include "nodesTreeViews.h"
-
+#include "materialObject.h"
 #include <windows.h>
 #include <iostream>
 
@@ -8,6 +8,8 @@ nodesTreeViews::nodesTreeViews() {
 	GetCurrentDirectory(1000, buf); //得到当前工作路径
 	std::string resoucePath = buf;
 	reader = std::make_shared<fbxReader>(resoucePath + "\\resource\\");
+
+	m_geometry = std::make_shared<geometryObject>();
 }
 
 nodesTreeViews::~nodesTreeViews() {
@@ -33,9 +35,7 @@ void nodesTreeViews::showTreeNodes() {
 	}
 	ImGui::PushItemWidth(ImGui::GetFontSize() * 0.35f);
 	showMenu();
-	//for (auto e : m_objects) {
-	//	e->objectShow();
-	//}
+	if (hasGeometry) m_geometry->objectShow();
 	ImGui::End();
 
 	if (showFbxFilter) showFilter();
@@ -58,7 +58,7 @@ void nodesTreeViews::showFilter() {
 	const ImGuiViewport* main_viewport = ImGui::GetMainViewport();
 	ImGui::SetNextWindowPos(ImVec2(main_viewport->WorkPos.x + 650, main_viewport->WorkPos.y + 30), ImGuiCond_FirstUseEver);
 
-	if (!ImGui::Begin("fbx importer"))//could set window flags in second param
+	if (!ImGui::Begin("fbx importer", &showFbxFilter))//could set window flags in second param
 	{
 		// Early out if the window is collapsed, as an optimization.
 		ImGui::End();
@@ -72,10 +72,20 @@ void nodesTreeViews::showFilter() {
 		fileName = filter.InputBuf;
 		reader->setFileName(fileName);
 		reader->read();
+		refreshNodes(reader);
+		m_geometry->setName(fileName);
+		hasGeometry = true;
 	}
 	ImGui::End();
 }
 
-void nodesTreeViews::refreshNodes() {
+void nodesTreeViews::refreshNodes(std::shared_ptr<fbxReader> reader) {
+	auto meshs = reader->getMeshes();
 
+	for (auto e : meshs) {
+		auto mesh = std::make_shared<FbxMesh>(e);
+		materialObject::Ptr material = std::make_shared<materialObject>();
+		material->setMesh(mesh);
+		m_geometry->addObject(material);
+	}
 }

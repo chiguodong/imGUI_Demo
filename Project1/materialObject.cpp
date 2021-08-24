@@ -18,3 +18,8 @@ void materialObject::objectShow() {
 		ImGui::TreePop();
 	}
 }
+
+void materialObject::setMesh(std::shared_ptr<FbxMesh> mesh) {
+	m_mesh = mesh;
+	m_name = mesh->name;
+}

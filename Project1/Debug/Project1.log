@@ -1,5 +1,3 @@
-﻿  fbxReader.cpp
-  nodesTreeViews.cpp
-  main.cpp
-  正在生成代码...
+﻿  main.cpp
+LINK : warning LNK4098: 默认库“MSVCRT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
   Project1.vcxproj -> C:\Users\zhangtianrui\source\repos\Project1\Debug\openGL_test.exe

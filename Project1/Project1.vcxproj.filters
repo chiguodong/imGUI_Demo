@@ -87,9 +87,6 @@
     <ClCompile Include="nodesTreeViews.cpp">
       <Filter>源文件\console</Filter>
     </ClCompile>
-    <ClCompile Include="geometryObject.cpp">
-      <Filter>源文件\objects</Filter>
-    </ClCompile>
     <ClCompile Include="materialObject.cpp">
       <Filter>源文件\objects</Filter>
     </ClCompile>
@@ -311,6 +308,9 @@
     </ClCompile>
     <ClCompile Include="thirdLib\glad\src\glad.c">
       <Filter>源文件\glad</Filter>
+    </ClCompile>
+    <ClCompile Include="geometryObject.cpp">
+      <Filter>源文件\objects</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
