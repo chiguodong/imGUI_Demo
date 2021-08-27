@@ -217,7 +217,6 @@ vec3 BRDF(Light light, BRDFParam p, vec3 N, vec3 V, vec3 albedo) {
 void main()
 {
     vec3 albedo = pow(texture2D(diffuseMap, vTexcoord).rgb, vec3(2.2));
-    albedo = vec3(1.0, 0.5, 0.5);
     getLights(vWorldPosition);
     BRDFParam p;
     vec3 mraColor   = texture2D(mraMap,vTexcoord).rgb;
@@ -240,5 +239,5 @@ void main()
     vec3 color = Lo;//ambient + Lo;
     color = pow(color, vec3(1.0 / 2.2));
     
-    gl_FragColor = vec4(albedo , 1.0);
+    gl_FragColor = vec4(color  , 1.0);
 }

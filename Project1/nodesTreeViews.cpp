@@ -38,6 +38,7 @@ void nodesTreeViews::showTreeNodes() {
 	{
 		// Early out if the window is collapsed, as an optimization.
 		ImGui::End();
+
 		return;
 	}
 	ImGui::PushItemWidth(ImGui::GetFontSize() * 0.35f);
@@ -47,7 +48,6 @@ void nodesTreeViews::showTreeNodes() {
 
 	if (showFbxFilter) showFilter();
 }
-
 
 void nodesTreeViews::showMenu() {
 	if (ImGui::BeginMenuBar())
@@ -72,7 +72,7 @@ void nodesTreeViews::showFilter() {
 		return;
 	}
 
-	static ImGuiTextFilter filter;
+	static ImGuiTextFilter filter("expression.fbx");
 	filter.Draw();
 	if (ImGui::Button("Import")) {
 		char* fileName;
@@ -90,12 +90,13 @@ void nodesTreeViews::refreshNodes(std::shared_ptr<fbxReader> reader) {
 	auto meshs = reader->getMeshes();
 	Soul::editorRender* render = Soul::editorRender::getRender();
 	render->addGroup(meshs);
-	render->setProgramFromPath("default", m_resoucePath + "defaultBrdf.vert", m_resoucePath + "defaultBrdf.frag");
 	for (auto e : meshs) {
 		auto mesh = std::make_shared<FbxMesh>(e);
 		materialObject::Ptr material = std::make_shared<materialObject>();
 		material->setMesh(mesh);
 		m_geometry->addObject(material);
 		material->setFatherGeometry(m_geometry);
+		render->setProgram(mesh->name, mesh->name, m_resoucePath + "defaultBrdf.vert", m_resoucePath + "defaultBrdf.frag", 1);
+
 	}
 }
