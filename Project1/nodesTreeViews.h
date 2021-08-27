@@ -1,10 +1,15 @@
 #pragma once
+
+#ifndef NODESTREEVIEWS_H
+#define NODESTREEVIEWS_H
+
 #include "imgui/imgui.h"
 #include "baseObject.h"
 #include "fbxReader.h"
 #include "geometryObject.h"
 #include <vector>
 
+using namespace ztr;
 class nodesTreeViews {
 public:
 	nodesTreeViews();
@@ -22,4 +27,7 @@ private:
 	bool showFbxFilter{false};
 	std::shared_ptr<fbxReader> reader{nullptr};
 	bool hasGeometry{false};
+	std::string m_resoucePath{ "" };
 };
+
+#endif // NODESTREEVIEWS_H

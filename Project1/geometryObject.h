@@ -1,6 +1,8 @@
 #pragma once
+#ifndef SOULGEOMETRYOBJECT_H
+#define SOULGEOMETRYOBJECT_H
+
 #include "baseObject.h"
-#include "materialObject.h"
 #include <vector>
 class geometryObject : public baseObject
 {
@@ -9,8 +11,11 @@ public:
 	geometryObject();
 	~geometryObject();
 	virtual void objectShow() override;
-	inline void addObject(materialObject::Ptr material) { m_materialObjects.emplace_back(material); }
+	inline void addObject(baseObject::Ptr material) { m_materialObjects.emplace_back(material); }
+	inline void clearObject();
+	void clearMaterialShowFlag();
 private:
-	std::vector<materialObject::Ptr> m_materialObjects;
+	std::vector<baseObject::Ptr> m_materialObjects;
 };
 
+#endif SOULGEOMETRYOBJECT_H

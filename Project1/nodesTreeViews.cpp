@@ -1,13 +1,20 @@
 #include "nodesTreeViews.h"
 #include "materialObject.h"
+#include "SoulEditorRender.hpp"
 #include <windows.h>
 #include <iostream>
 
 nodesTreeViews::nodesTreeViews() {
 	char buf[1000];
 	GetCurrentDirectory(1000, buf); //得到当前工作路径
-	std::string resoucePath = buf;
-	reader = std::make_shared<fbxReader>(resoucePath + "\\resource\\");
+	m_resoucePath = std::string(buf) + "\\resource\\";
+
+	for (int i = 0; i < m_resoucePath.length(); i++) {
+		if (m_resoucePath[i] == '\\') {
+			m_resoucePath[i] = '/';
+		}
+	}
+	reader = std::make_shared<fbxReader>(m_resoucePath);
 
 	m_geometry = std::make_shared<geometryObject>();
 }
@@ -35,7 +42,7 @@ void nodesTreeViews::showTreeNodes() {
 	}
 	ImGui::PushItemWidth(ImGui::GetFontSize() * 0.35f);
 	showMenu();
-	if (hasGeometry) m_geometry->objectShow();
+	if (hasGeometry) m_geometry->asTObject<geometryObject>()->objectShow();
 	ImGui::End();
 
 	if (showFbxFilter) showFilter();
@@ -81,11 +88,14 @@ void nodesTreeViews::showFilter() {
 
 void nodesTreeViews::refreshNodes(std::shared_ptr<fbxReader> reader) {
 	auto meshs = reader->getMeshes();
-
+	Soul::editorRender* render = Soul::editorRender::getRender();
+	render->addGroup(meshs);
+	render->setProgramFromPath("default", m_resoucePath + "defaultBrdf.vert", m_resoucePath + "defaultBrdf.frag");
 	for (auto e : meshs) {
 		auto mesh = std::make_shared<FbxMesh>(e);
 		materialObject::Ptr material = std::make_shared<materialObject>();
 		material->setMesh(mesh);
 		m_geometry->addObject(material);
+		material->setFatherGeometry(m_geometry);
 	}
 }

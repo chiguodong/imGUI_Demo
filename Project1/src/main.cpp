@@ -6,11 +6,14 @@
 #include "nodesTreeViews.h"
 #include "materialObject.h"
 #include "fbxReader.h"
+#include "materialEditorManager.h"
+#include "SoulEditorRender.hpp"
+
+using namespace Soul;
 
 int main(void)
 {
 	GLFWwindow* window;
-
 	/* Initialize the library */
 	if (!glfwInit())
 		return -1;
@@ -48,6 +51,11 @@ int main(void)
 
 	//treeView
 	nodesTreeViews treeView;
+	//paramView
+	auto paramView = materialEditorManager::getManager();
+	//3D render
+	editorRender* render = editorRender::getRender();
+	render->initBlankRender(640, 480);
 	//materialObject::Ptr demoMaterialObject = std::make_shared<materialObject>();
 	//demoMaterialObject->setName("head");
 	//treeView.addObject(demoMaterialObject);
@@ -70,6 +78,7 @@ int main(void)
 
 		//tree window
 		treeView.showTreeNodes();
+		paramView->show();
 		ImGui::Render();
 		int display_w, display_h;
 		glfwGetFramebufferSize(window, &display_w, &display_h);
@@ -78,6 +87,7 @@ int main(void)
 		glClearColor(255, 255, 0, 255);
 		/* Render here */
 		glClear(GL_COLOR_BUFFER_BIT);
+		render->render();
 		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 		/* Swap front and back buffers */
 		glfwSwapBuffers(window);

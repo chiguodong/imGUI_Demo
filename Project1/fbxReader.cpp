@@ -2,6 +2,7 @@
 #include <iostream>
 
 using namespace Assimp;
+using namespace ztr;
 
 static aiScene*                     s_scene{ nullptr };
 static std::vector<aiNode*>         s_allNodes;
@@ -21,11 +22,6 @@ static void traversalAllNodes(aiNode* node) {
 void fbxReader::read() {
 	Importer import;
 	auto path = m_path + m_fileName;
-	for (int i = 0; i < path.length(); i++) {
-		if (path[i] == '\\') {
-			path[i] = '/';
-		}
-	}
 	const aiScene* scene = import.ReadFile(path, aiProcess_Triangulate | aiProcess_GenSmoothNormals |
 		aiProcess_FlipUVs | aiProcess_CalcTangentSpace);
 

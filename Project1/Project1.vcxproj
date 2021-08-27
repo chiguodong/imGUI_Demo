@@ -90,7 +90,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\zhangtianrui\source\repos\Project1\Project1\render\include;C:\Users\zhangtianrui\source\repos\Project1\Project1\render\thirdParty;C:\Users\zhangtianrui\source\repos\Project1\Project1;C:\Users\zhangtianrui\source\repos\Project1\Project1\thirdLib;C:\Users\zhangtianrui\source\repos\Project1\Project1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)render;$(ProjectDir)render\Wrapper;$(ProjectDir)render\Plugins;$(ProjectDir)render\Materials;$(ProjectDir)render\Lights;$(ProjectDir)render\Interaction\Event;$(ProjectDir)render\Interaction\Callback;$(ProjectDir)render\API\oc;$(ProjectDir)render\API\sticker3D;$(ProjectDir)render\API\avatar;$(ProjectDir)render\Core;$(ProjectDir)render\API;$(ProjectDir)render\Animation;C:\Users\zhangtianrui\source\repos\Project1\Project1\render\thirdParty;C:\Users\zhangtianrui\source\repos\Project1\Project1;C:\Users\zhangtianrui\source\repos\Project1\Project1\thirdLib;C:\Users\zhangtianrui\source\repos\Project1\Project1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <DisableSpecificWarnings>4996</DisableSpecificWarnings>
     </ClCompile>
@@ -106,7 +106,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\zhangtianrui\source\repos\Project1\Project1\render\include;C:\Users\zhangtianrui\source\repos\Project1\Project1\render\thirdParty;C:\Users\zhangtianrui\source\repos\Project1\Project1;C:\Users\zhangtianrui\source\repos\Project1\Project1\thirdLib;C:\Users\zhangtianrui\source\repos\Project1\Project1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)render;$(ProjectDir)render\Wrapper;$(ProjectDir)render\Plugins;$(ProjectDir)render\Materials;$(ProjectDir)render\Lights;$(ProjectDir)render\Interaction\Event;$(ProjectDir)render\Interaction\Callback;$(ProjectDir)render\API\oc;$(ProjectDir)render\API\sticker3D;$(ProjectDir)render\API\avatar;$(ProjectDir)render\Core;$(ProjectDir)render\API;$(ProjectDir)render\Animation;C:\Users\zhangtianrui\source\repos\Project1\Project1\render\thirdParty;C:\Users\zhangtianrui\source\repos\Project1\Project1;C:\Users\zhangtianrui\source\repos\Project1\Project1\thirdLib;C:\Users\zhangtianrui\source\repos\Project1\Project1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <DisableSpecificWarnings>4996</DisableSpecificWarnings>
     </ClCompile>
@@ -124,7 +124,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\zhangtianrui\source\repos\Project1\Project1\render\include;C:\Users\zhangtianrui\source\repos\Project1\Project1\render\thirdParty;C:\Users\zhangtianrui\source\repos\Project1\Project1;C:\Users\zhangtianrui\source\repos\Project1\Project1\thirdLib;C:\Users\zhangtianrui\source\repos\Project1\Project1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)render;$(ProjectDir)render\Wrapper;$(ProjectDir)render\Plugins;$(ProjectDir)render\Materials;$(ProjectDir)render\Lights;$(ProjectDir)render\Interaction\Event;$(ProjectDir)render\Interaction\Callback;$(ProjectDir)render\API\oc;$(ProjectDir)render\API\sticker3D;$(ProjectDir)render\API\avatar;$(ProjectDir)render\Core;$(ProjectDir)render\API;$(ProjectDir)render\Animation;C:\Users\zhangtianrui\source\repos\Project1\Project1\render\thirdParty;C:\Users\zhangtianrui\source\repos\Project1\Project1;C:\Users\zhangtianrui\source\repos\Project1\Project1\thirdLib;C:\Users\zhangtianrui\source\repos\Project1\Project1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <DisableSpecificWarnings>4996</DisableSpecificWarnings>
     </ClCompile>
@@ -144,7 +144,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\zhangtianrui\source\repos\Project1\Project1\render\include;C:\Users\zhangtianrui\source\repos\Project1\Project1\render\thirdParty;C:\Users\zhangtianrui\source\repos\Project1\Project1;C:\Users\zhangtianrui\source\repos\Project1\Project1\thirdLib;C:\Users\zhangtianrui\source\repos\Project1\Project1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)render;$(ProjectDir)render\Wrapper;$(ProjectDir)render\Plugins;$(ProjectDir)render\Materials;$(ProjectDir)render\Lights;$(ProjectDir)render\Interaction\Event;$(ProjectDir)render\Interaction\Callback;$(ProjectDir)render\API\oc;$(ProjectDir)render\API\sticker3D;$(ProjectDir)render\API\avatar;$(ProjectDir)render\Core;$(ProjectDir)render\API;$(ProjectDir)render\Animation;C:\Users\zhangtianrui\source\repos\Project1\Project1\render\thirdParty;C:\Users\zhangtianrui\source\repos\Project1\Project1;C:\Users\zhangtianrui\source\repos\Project1\Project1\thirdLib;C:\Users\zhangtianrui\source\repos\Project1\Project1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <DisableSpecificWarnings>4996</DisableSpecificWarnings>
     </ClCompile>
@@ -160,7 +160,9 @@
     <ClCompile Include="baseObject.cpp" />
     <ClCompile Include="fbxReader.cpp" />
     <ClCompile Include="geometryObject.cpp" />
+    <ClCompile Include="materialEditorManager.cpp" />
     <ClCompile Include="materialObject.cpp" />
+    <ClCompile Include="materialParamEditor.cpp" />
     <ClCompile Include="render\Animation\SoulBone.cpp" />
     <ClCompile Include="render\Animation\SoulBoneUpdateCallback.cpp" />
     <ClCompile Include="render\Animation\SoulInterpolator.cpp" />
@@ -168,9 +170,9 @@
     <ClCompile Include="render\Animation\SoulSampler.cpp" />
     <ClCompile Include="render\Animation\SoulSkeleton.cpp" />
     <ClCompile Include="render\Animation\SoulSkeletonUpdateCallback.cpp" />
-    <ClCompile Include="render\Animation\SoulSkin.cpp" />
     <ClCompile Include="render\API\avatar\SoulAvatarRender.cpp" />
     <ClCompile Include="render\API\avatar\SoulDemoApi.cpp" />
+    <ClCompile Include="render\API\avatar\SoulEditorRender.cpp" />
     <ClCompile Include="render\API\SoulRenderAPI.cpp" />
     <ClCompile Include="render\API\sticker3D\SoulSticker3DCallback.cpp" />
     <ClCompile Include="render\API\sticker3D\SoulSticker3DLight.cpp" />
@@ -232,6 +234,7 @@
     <ClCompile Include="render\Wrapper\SoulUtils.cpp" />
     <ClCompile Include="render\Wrapper\SoulVertexArrayObject.cpp" />
     <ClCompile Include="render\Wrapper\SoulVertexBufferObject.cpp" />
+    <ClCompile Include="shaderJointer.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="thirdLib\glad\src\glad.c" />
     <ClCompile Include="thirdLib\imgui\imgui.cpp" />
@@ -245,20 +248,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="baseObject.h" />
+    <ClInclude Include="fbxGeometryInfo.h" />
     <ClInclude Include="fbxReader.h" />
     <ClInclude Include="geometryObject.h" />
-    <ClInclude Include="include\openGLEnv.h" />
+    <ClInclude Include="materialEditorManager.h" />
     <ClInclude Include="materialObject.h" />
-    <ClInclude Include="render\Animation\SoulBone.hpp" />
-    <ClInclude Include="render\Animation\SoulBoneUpdateCallback.hpp" />
-    <ClInclude Include="render\Animation\SoulInterpolator.hpp" />
-    <ClInclude Include="render\Animation\SoulKeyframe.hpp" />
-    <ClInclude Include="render\Animation\SoulSampler.hpp" />
-    <ClInclude Include="render\Animation\SoulSkeleton.hpp" />
-    <ClInclude Include="render\Animation\SoulSkeletonUpdateCallback.hpp" />
-    <ClInclude Include="render\Animation\SoulSkin.hpp" />
+    <ClInclude Include="materialParamEditor.h" />
+    <ClInclude Include="materialParamUnion.h" />
+    <ClInclude Include="nodesTreeViews.h" />
     <ClInclude Include="render\API\avatar\SoulAvatarRender.hpp" />
     <ClInclude Include="render\API\avatar\SoulDemoApi.hpp" />
+    <ClInclude Include="render\API\avatar\SoulEditorRender.hpp" />
     <ClInclude Include="render\API\SoulRenderAPI.hpp" />
     <ClInclude Include="render\API\sticker3D\SoulSticker3DCallback.hpp" />
     <ClInclude Include="render\API\sticker3D\SoulSticker3DLight.hpp" />
@@ -272,6 +272,7 @@
     <ClInclude Include="render\Core\SoulCameraController.h" />
     <ClInclude Include="render\Core\SoulEvent.hpp" />
     <ClInclude Include="render\Core\SoulEventVisitor.hpp" />
+    <ClInclude Include="render\Core\SoulFilePath.h" />
     <ClInclude Include="render\Core\SoulGeneralGeometry.hpp" />
     <ClInclude Include="render\Core\SoulGeode.hpp" />
     <ClInclude Include="render\Core\SoulGeometry.hpp" />
@@ -315,7 +316,7 @@
     <ClInclude Include="render\Materials\SoulPhysicalMaterial.hpp" />
     <ClInclude Include="render\Plugins\SoulBundleReader.hpp" />
     <ClInclude Include="render\Plugins\SoulBundleReader_new.h" />
-    <ClInclude Include="render\Plugins\SoulFilePath.hpp" />
+    <ClInclude Include="render\Plugins\SoulDebugTool.h" />
     <ClInclude Include="render\Plugins\SoulGeometryInfo.h" />
     <ClInclude Include="render\Wrapper\SoulElementBufferObject.hpp" />
     <ClInclude Include="render\Wrapper\SoulFrameBuffer.hpp" />
@@ -329,9 +330,7 @@
     <ClInclude Include="render\Wrapper\SoulUtils.hpp" />
     <ClInclude Include="render\Wrapper\SoulVertexArrayObject.h" />
     <ClInclude Include="render\Wrapper\SoulVertexBufferObject.hpp" />
-    <ClInclude Include="thirdLib\imgui\imconfig.h" />
-    <ClInclude Include="nodesTreeViews.h" />
-    <ClInclude Include="fbxGeometryInfo.h" />
+    <ClInclude Include="shaderJointer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
