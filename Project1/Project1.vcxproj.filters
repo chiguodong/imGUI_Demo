@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="源文件\imgui">
-      <UniqueIdentifier>{80a7d694-29f7-4c8e-8a5a-5f308d39285d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="源文件\console">
       <UniqueIdentifier>{a6594441-39d5-487a-bd23-379f0aa93a88}</UniqueIdentifier>
     </Filter>
@@ -79,31 +76,34 @@
     <Filter Include="头文件\render3D\Wrapper">
       <UniqueIdentifier>{27cb9d5f-48c8-4adc-bd1e-5974c69a8f73}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\glad\imgui">
+      <UniqueIdentifier>{80a7d694-29f7-4c8e-8a5a-5f308d39285d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="thirdLib\imgui\imgui.cpp">
-      <Filter>源文件\imgui</Filter>
+      <Filter>源文件\glad\imgui</Filter>
     </ClCompile>
     <ClCompile Include="thirdLib\imgui\imgui_demo.cpp">
-      <Filter>源文件\imgui</Filter>
+      <Filter>源文件\glad\imgui</Filter>
     </ClCompile>
     <ClCompile Include="thirdLib\imgui\imgui_draw.cpp">
-      <Filter>源文件\imgui</Filter>
+      <Filter>源文件\glad\imgui</Filter>
     </ClCompile>
     <ClCompile Include="thirdLib\imgui\imgui_widgets.cpp">
-      <Filter>源文件\imgui</Filter>
+      <Filter>源文件\glad\imgui</Filter>
     </ClCompile>
     <ClCompile Include="thirdLib\imgui\imgui_tables.cpp">
-      <Filter>源文件\imgui</Filter>
+      <Filter>源文件\glad\imgui</Filter>
     </ClCompile>
     <ClCompile Include="thirdLib\imgui\imgui_impl_glfw.cpp">
-      <Filter>源文件\imgui</Filter>
+      <Filter>源文件\glad\imgui</Filter>
     </ClCompile>
     <ClCompile Include="thirdLib\imgui\imgui_impl_opengl3.cpp">
-      <Filter>源文件\imgui</Filter>
+      <Filter>源文件\glad\imgui</Filter>
     </ClCompile>
     <ClCompile Include="baseObject.cpp">
       <Filter>源文件\objects</Filter>
@@ -344,6 +344,15 @@
     </ClCompile>
     <ClCompile Include="render\API\avatar\SoulEditorRender.cpp">
       <Filter>源文件\render3D\API</Filter>
+    </ClCompile>
+    <ClCompile Include="lightObject.cpp">
+      <Filter>源文件\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="lightParamEditor.cpp">
+      <Filter>源文件\console</Filter>
+    </ClCompile>
+    <ClCompile Include="lightEditorManager.cpp">
+      <Filter>源文件\console</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -598,6 +607,21 @@
     </ClInclude>
     <ClInclude Include="render\API\avatar\SoulEditorRender.hpp">
       <Filter>头文件\render3D\API</Filter>
+    </ClInclude>
+    <ClInclude Include="materialShaderParamEnum.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lightObject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lightParamUnion.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lightParamEditor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lightEditorManager.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

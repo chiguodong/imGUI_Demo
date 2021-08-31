@@ -1,5 +1,6 @@
 #include "nodesTreeViews.h"
 #include "materialObject.h"
+#include "lightObject.h"
 #include "SoulEditorRender.hpp"
 #include <windows.h>
 #include <iostream>
@@ -17,6 +18,11 @@ nodesTreeViews::nodesTreeViews() {
 	reader = std::make_shared<fbxReader>(m_resoucePath);
 
 	m_geometry = std::make_shared<geometryObject>();
+	m_light0 = std::make_shared<lightObject>();
+	m_light0->setName("light0");
+	m_light1 = std::make_shared<lightObject>();
+	m_light1->setName("light1");
+	m_light1->setLightNum(1);
 }
 
 nodesTreeViews::~nodesTreeViews() {
@@ -43,6 +49,8 @@ void nodesTreeViews::showTreeNodes() {
 	}
 	ImGui::PushItemWidth(ImGui::GetFontSize() * 0.35f);
 	showMenu();
+	m_light0->objectShow();
+	m_light1->objectShow();
 	if (hasGeometry) m_geometry->asTObject<geometryObject>()->objectShow();
 	ImGui::End();
 
@@ -97,6 +105,5 @@ void nodesTreeViews::refreshNodes(std::shared_ptr<fbxReader> reader) {
 		m_geometry->addObject(material);
 		material->setFatherGeometry(m_geometry);
 		render->setProgram(mesh->name, mesh->name, m_resoucePath + "defaultBrdf.vert", m_resoucePath + "defaultBrdf.frag", 1);
-
 	}
 }

@@ -1,0 +1,222 @@
+{
+  "mid": {
+     "face_front": [
+      {
+      "index": 18670,
+      "direction": 0,
+      "left": "1",
+      "right": "0"
+      },
+      {
+        "index": 8563,
+        "direction": 0,
+        "left": "0",
+        "right": "1"
+      },
+      {
+        "index": 9692,
+        "direction": 1,
+        "up": "2",
+        "down": "3"
+      },
+      {
+        "index": 13642,
+        "direction": 0,
+        "left": "5",
+        "right": "4"
+      },
+      {
+        "index": 3188,
+        "direction": 0,
+        "left": "4",
+        "right": "5"
+      },
+      {
+        "index": 9633,
+        "direction": 1,
+        "up": "7",
+        "down": "6"
+      },
+      {
+        "index": 18117,
+        "direction": 0,
+        "left": "9",
+        "right": "8"
+      },
+      {
+        "index": 3999,
+        "direction": 1,
+        "up": "8",
+        "down": "9"
+      },
+      {
+        "index": 14893,
+        "direction": 0,
+        "left": "56",
+        "right": ""
+        },
+      {
+        "index": 5073,
+        "direction": 0,
+        "left": "",
+        "right": "56"
+        }
+    ],
+    "face_side": [
+        {
+          "index": 9692,
+          "direction": 1,
+          "up": "2",
+          "down": "3"
+        },
+        {
+          "index": 9633,
+          "direction": 1,
+          "up": "7",
+          "down": "6"
+        },
+        {
+          "index": 3188,
+          "direction": 0,
+          "left": "4",
+          "right": "5"
+        },
+        {
+          "index": 3999,
+          "direction": 1,
+          "up": "8",
+          "down": "9"
+        },
+        {
+          "index": 8563,
+          "direction": 0,
+          "left": "0",
+          "right": "1"
+        },
+        {
+          "index": 5073,
+          "direction": 0,
+          "left": "",
+          "right": "56"
+          }
+    ],
+    "eye_front": [
+      {
+        "index": 15973,
+        "direction": 2,
+        "up": "34",
+        "down": "33",
+        "left": "27",
+        "right": "26"
+      },
+      {
+        "index": 17819,
+        "direction": 2,
+        "up": "31",
+        "down": "30",
+        "left": "26",
+        "right": "27"
+      },
+      {
+        "index": 6474,
+        "direction": 2,
+        "up": "31",
+        "down": "30",
+        "left": "27",
+        "right": "26"
+      },
+      {
+        "index": 7383,
+        "direction": 2,
+        "up": "33",
+        "down": "34",
+        "left": "26",
+        "right": "27"
+      },
+      {
+        "index": 17859,
+        "direction": 1,
+        "up": "32",
+        "down": "51"
+      },
+      {
+        "index": 7516,
+        "direction": 1,
+        "up": "32",
+        "down": "51"
+      },
+      {
+        "index": 17781,
+        "direction": 1,
+        "up": "52",
+        "down": "53"
+      },
+      {
+        "index": 7438,
+        "direction": 1,
+        "up": "52",
+        "down": "53"
+      }
+    ],
+    "eye_side": [
+    ],
+    "mouth_front": [
+     {
+        "index": 18891,
+        "direction": 2,
+        "up": "16",
+        "down": "15",
+        "left": "11",
+        "right": "10"
+      },
+      {
+        "index": 3872,
+        "direction": 2,
+        "up": "16",
+        "down": "15",
+        "left": "10",
+        "right": "11"
+      },
+      {
+        "index": 19532,
+        "direction": 1,
+        "down": "12",
+        "up": "13"
+        },
+      {
+        "index": 2913,
+        "direction": 1,
+        "up": "23",
+        "down": "24"
+        }
+      
+    ],
+    "mouth_side": [],
+    "nose_front": [{
+      "index": 19464,
+      "direction": 1,
+      "up": "18",
+      "down": "17"
+    },
+      {
+        "index": 2901,
+        "direction": 1,
+        "up": "20",
+        "down": "19"
+      },
+      {
+        "index": 12874,
+        "direction": 0,
+        "left": "22",
+        "right": "21"
+      }, {
+        "index": 2965,
+        "direction": 0,
+        "left": "21",
+        "right": "22"
+      }
+    ],
+    "nose_side": []
+  }
+}
+

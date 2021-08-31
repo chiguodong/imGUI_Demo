@@ -160,6 +160,9 @@
     <ClCompile Include="baseObject.cpp" />
     <ClCompile Include="fbxReader.cpp" />
     <ClCompile Include="geometryObject.cpp" />
+    <ClCompile Include="lightEditorManager.cpp" />
+    <ClCompile Include="lightObject.cpp" />
+    <ClCompile Include="lightParamEditor.cpp" />
     <ClCompile Include="materialEditorManager.cpp" />
     <ClCompile Include="materialObject.cpp" />
     <ClCompile Include="materialParamEditor.cpp" />
@@ -251,6 +254,9 @@
     <ClInclude Include="fbxGeometryInfo.h" />
     <ClInclude Include="fbxReader.h" />
     <ClInclude Include="geometryObject.h" />
+    <ClInclude Include="lightEditorManager.h" />
+    <ClInclude Include="lightObject.h" />
+    <ClInclude Include="lightParamEditor.h" />
     <ClInclude Include="materialEditorManager.h" />
     <ClInclude Include="materialObject.h" />
     <ClInclude Include="materialParamEditor.h" />
@@ -331,6 +337,8 @@
     <ClInclude Include="render\Wrapper\SoulVertexArrayObject.h" />
     <ClInclude Include="render\Wrapper\SoulVertexBufferObject.hpp" />
     <ClInclude Include="shaderJointer.h" />
+    <ClInclude Include="materialShaderParamEnum.h" />
+    <ClInclude Include="lightParamUnion.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

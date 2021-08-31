@@ -15,7 +15,6 @@ void geometryObject::objectShow() {
 		}
 		ImGui::TreePop();
 	}
-	
 }
 
 void geometryObject::clearMaterialShowFlag() {

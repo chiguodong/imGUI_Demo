@@ -1,0 +1,50 @@
+
+uniform sampler2D   flowMap;
+uniform float       anisotropy;
+
+vec3 fresnelSchlick(float cosTheta, vec3 F0);
+
+ float V_SmithGGXCorrelated_Anisotropic(float at, float ab, float ToV, float BoV, float ToL, float BoL, float NoV, float NoL) {
+    float lambdaV = NoL * length(vec3(at * ToV, ab * BoV, NoV));
+    float lambdaL = NoV * length(vec3(at * ToL, ab * BoL, NoL));
+     float v = 0.5 / (lambdaV + lambdaL);
+    return saturateMediump(v);
+}
+
+float D_GGX_Anisotropic(float NoH, const vec3 h, const vec3 t, const vec3 b, float at, float ab) {
+    float ToH = dot(t, h);
+    float BoH = dot(b, h);
+    float a2 = at * ab;
+     vec3 v = vec3(ab * ToH, at * BoH, a2 * NoH);
+     float v2 = dot(v, v);
+    float w2 = a2 / v2;
+    return a2 * w2 * w2 * (1.0 / PI);
+}
+
+
+float getAnitropicMicroNormal(vec3 N, vec3 L, vec3 H, vec3 V, float roughness) {
+    
+    vec3 Bitangent = cross(vNormal, vTangent);
+    vec3 T;
+    T.xy = texture2D(flowMap, vTexcoord).xy;
+    T = T.x * vTangent + T.y * Bitangent;
+    T = T - vNormal * dot(T, vNormal);
+    T = normalize(T);
+    //vec3 T = -normalize(vTangent);
+    //T = T * N;
+    vec3 B = -normalize(cross(vNormal,T));
+    
+    float at = max(roughness * (1.0 + 0.99 * anisotropy), 0.001);
+    float ab = max(roughness * (1.0 - 0.99 * anisotropy), 0.001);
+    
+    float ToV = clamp(dot(T, V), 0.0, 1.0);
+    float BoV = clamp(dot(B, V), 0.0, 1.0);
+    float ToL = clamp(dot(T, L), 0.0, 1.0);
+    float BoL = clamp(dot(B, L), 0.0, 1.0);
+    float NoH = clamp(dot(N, H), 0.0, 1.0);
+    float NoL = clamp(dot(N, L), 0.0, 1.0);
+
+    float NDF        = D_GGX_Anisotropic(NoH, H, T, B, at, ab);
+     float G    = V_SmithGGXCorrelated_Anisotropic(at, ab, ToV, BoV, ToL, BoL, clamp(dot(N, V), 0.0, 1.0), NoL);
+    return NDF * G;
+}

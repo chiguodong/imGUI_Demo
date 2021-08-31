@@ -8,17 +8,18 @@
 #include "fbxReader.h"
 #include "materialEditorManager.h"
 #include "SoulEditorRender.hpp"
+#include "lightEditorManager.h"
 
 using namespace Soul;
 
 int main(void)
 {
 	GLFWwindow* window;
-	/* Initialize the library */
+	/* Initialize the library */ 
 	if (!glfwInit())
 		return -1;
 	/* Create a windowed mode window and its OpenGL context */
-	window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
+	window = glfwCreateWindow(640 * 1.5, 480 * 1.5, "Hello World", NULL, NULL);
 	if (!window)
 	{
 		glfwTerminate(); 
@@ -53,9 +54,10 @@ int main(void)
 	nodesTreeViews treeView;
 	//paramView
 	auto paramView = materialEditorManager::getManager();
+	auto lightManager = lightEditorManager::getManager();
 	//3D render
 	editorRender* render = editorRender::getRender();
-	render->initBlankRender(640, 480);
+	render->initBlankRender(640 * 1.5, 480 * 1.5);
 	//materialObject::Ptr demoMaterialObject = std::make_shared<materialObject>();
 	//demoMaterialObject->setName("head");
 	//treeView.addObject(demoMaterialObject);
@@ -79,6 +81,7 @@ int main(void)
 		//tree window
 		treeView.showTreeNodes();
 		paramView->show();
+		lightManager->showObject();
 		ImGui::Render();
 		int display_w, display_h;
 		glfwGetFramebufferSize(window, &display_w, &display_h);

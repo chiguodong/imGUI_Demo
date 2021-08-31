@@ -25,4 +25,5 @@ void materialObject::setMesh(std::shared_ptr<FbxMesh> mesh) {
 	m_mesh = mesh;
 	m_name = mesh->name;
 	m_editorView->setName(m_name);
+	m_editorView->init();
 }

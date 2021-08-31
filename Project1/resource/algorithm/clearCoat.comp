@@ -1,0 +1,30 @@
+uniform float clearCoatPower;
+uniform float clearCoatRoughness;
+
+float D_GGX(const vec3 n, const vec3 h, float roughness);
+vec3 fresnelSchlick(float cosTheta, vec3 F0);
+
+// [Burley 2012, "Physically-Based Shading at Disney"]
+vec3 Diffuse_Burley_Disney( vec3 DiffuseColor, float Roughness, float NoV, float NoL, float VoH)
+{
+    float FD90 = 0.5 + 2.0 * VoH * VoH * Roughness;
+    float FdV = 1.0 + (FD90 - 1.0) * pow(1.0 - NoV, 5.0);
+    float FdL = 1.0 + (FD90 - 1.0) * pow(1.0 - NoL, 5.0);
+    return DiffuseColor * (1.0 / PI) * FdV * FdL ;
+}
+
+float getClearCoatPower(vec3 N, vec3 H, vec3 V, vec3 L) {
+    float LoH = clamp(dot(L, H), 0.0, 1.0);
+    float NoV = clamp(dot(N, V), 0.0, 1.0);
+    float Fc = fresnelSchlick(NoV, vec3(0.04)).x * clearCoatPower;
+#ifdef AnisotripicClearCoat
+    float DV = getAnitropicMicroNormal(N, L, H);
+    float Frc = DV * Fc;
+#else
+    float Dc = D_GGX(N, H, clearCoatRoughness);
+    float Vc = 0.25 / (LoH * LoH);//v_kelemen
+    float Frc = (Dc * Vc) * Fc;
+#endif
+    return Frc;
+}
+

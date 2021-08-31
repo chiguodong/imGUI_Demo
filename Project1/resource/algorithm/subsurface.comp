@@ -1,0 +1,14 @@
+uniform sampler2D   maskMap;//pixelThickness in map
+uniform float       subsurfacePower;
+uniform vec3        subsurfaceColor;
+
+vec3 getSubsurfaceColor(vec3 V, vec3 L, vec3 N, vec3 albedo) {
+float NoL = clamp(dot(N, L), 0.0, 1.0);
+    float pixelThickness = texture2D(maskMap, vTexcoord).r;
+    float scatterVoH = clamp(dot(V, -L), 0.0, 1.0);
+    float forwardScatter = exp2(scatterVoH * subsurfacePower - subsurfacePower);
+    float backScatter = clamp(NoL * pixelThickness + (1.0 - pixelThickness), 0.0, 1.0) * 0.5;
+    float subSurface = mix(backScatter, 1.0, forwardScatter) * (1.0 - pixelThickness);
+    vec3 color = subsurfaceColor * (subSurface + albedo.rgb / PI) * pixelThickness * subsurfacePower;
+    return color;
+}

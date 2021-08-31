@@ -45,7 +45,7 @@ struct SpotLight {
     float outerCutOff;
 };
 
-#define NR_DIR_LIGHTS   1
+#define NR_DIR_LIGHTS   2
 #define NR_POINT_LIGHTS 0
 #define NR_SPOT_LIGHTS  0
 
@@ -230,11 +230,12 @@ void main()
     vec3 Lo = vec3(0.0);
 //base brdf
 //pre calculate of Standard brdf
-    Lo += BRDF(lights[0], p, N, V, albedo);
-    
-#ifdef SUBSURFACE
-    Lo += getSubsurfaceColor(V, -lights[0].direction, N, albedo);
+    for(int i = 0; i < 2; i++) {
+        Lo += BRDF(lights[i], p, N, V, albedo);
+ #ifdef SUBSURFACE
+        Lo += getSubsurfaceColor(V, -lights[i].direction, N, albedo);
 #endif
+    }
     
     vec3 color = Lo;//ambient + Lo;
     color = pow(color, vec3(1.0 / 2.2));
